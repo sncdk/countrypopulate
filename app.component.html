@@ -1,0 +1,26 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Country</h3>
+      <select [(ngModel)]="countrySelected" (ngModelChange)="onSelect($event)">
+    <option *ngFor="let country of listcountry" [value]="country.iso2">{{country.name}}</option>
+    console.log(data);
+</select>
+
+    </div>
+    <div class="col-sm-4">
+      <h3>State</h3>
+      <select>
+    <option *ngFor="let state of liststate" [value]="state.iso2">{{state.name}}</option>
+</select>
+    </div>
+    <div class="col-sm-4">
+      <h3>City</h3>        
+      <select name="city" class="cities form-control" id="cityId">
+    <option value="">Select City</option>
+</select>
+    </div>
+  </div>
+</div>
